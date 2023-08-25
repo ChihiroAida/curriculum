@@ -5,7 +5,7 @@ public class Check {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		
-	       /*
+		 /*
 	        * 問1
 	        * int型の配列dataを作成し、値を3,1,2,7,5で初期化しなさい
 	        */
