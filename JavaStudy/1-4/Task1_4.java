@@ -15,7 +15,7 @@ public class Task1_4 {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		
-		  // 以下の変数「name」「pass」を使用して、②〜⑤の条件を満たす処理を記述してください。
+		 // 以下の変数「name」「pass」を使用して、②〜⑤の条件を満たす処理を記述してください。
         // nameとpassはログイン画面からの入力値だと想定してみましょう。
 
 
@@ -54,6 +54,7 @@ public class Task1_4 {
          else {
         	 System.out.println(CONST_MSG_ERROR_INPUT);
          }
+
 	}
 
 }
