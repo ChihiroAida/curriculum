@@ -16,7 +16,7 @@ import lombok.Data;
  */
 @Entity
 @Data
-@Table(name = "user")
+@Table(name = "user", schema = "public")
 public class UserEntity  {
 
     /**
@@ -25,7 +25,7 @@ public class UserEntity  {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     /**
      * 名前
      */
