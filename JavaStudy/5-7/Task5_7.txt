@@ -1,0 +1,9 @@
+
+エラー解析問題
+
+①問題点：ユーザーのパスワード認証に失敗してPostgreSQLに接続できない。
+　修正の仕方：PostgreSQLの正しいパスワードを記載する
+
+②問題点：PostgreSQL上の「Spring」データベースが存在していない（接続できていない）
+　修正の仕方：PostgreSQL上にSpringデータベースが作成できているか確認する
+　　　　　　　application.propertiesのDB接続情報が正しく記載できているか確認する
