@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>本の情報を編集</title>
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.2/css/bootstrap.min.css}"/>
+</head>
+<body>
+	<div th:replace="share::header"></div>
+    <div class="container">
+    	<h1>本の編集を行う</h1>
+    	<form th:action="@{/movie-edit}" th:object="${editMovieForm}" method="POST">
+    		<input type="hidden" th:field="*{id}" th:value="*{id}" />
+			<div class="mb-3">
+				<p th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="text-danger">Title Error</p>
+				<label for="movieTitle" class="form-label">タイトル</label>
+				<input id="movieTitle" class="form-control" type="text" th:field="*{title}">
+			</div>
+			<div class="mb-3">
+				<p th:if="${#fields.hasErrors('evaluation')}" th:errors="*{evaluation}" class="text-danger">Place Error</p>
+				<label for="movieEvaluation" class="form-label">評価</label>
+				<input id="movieEvaluation" class="form-control" type="number" th:field="*{evaluation}">
+			</div>
+			<div class="mb-3">
+				<p th:if="${#fields.hasErrors('place')}" th:errors="*{place}" class="text-danger">Place Error</p>
+				<label for="moviePlace" class="form-label">国</label>
+				<input id="moviePlace" class="form-control" type="text" th:field="*{place}">
+			</div>
+			<div class="mb-3">
+				<p th:if="${#fields.hasErrors('way')}" th:errors="*{way}" class="text-danger">Place Error</p>
+				<label for="movieWay" class="form-label">鑑賞方法</label>
+				<input id="movieWay" class="form-control" type="text" th:field="*{way}">
+			</div>
+			<div class="mb-3">
+				<p th:if="${#fields.hasErrors('memo')}" th:errors="*{memo}" class="text-danger">Memo Error</p>
+				<label for="movieMemo" class="form-label">メモ</label>
+				<input id="movieMemo" class="form-control" type="text" th:field="*{memo}">
+			</div>
+			<input type="submit" class="btn btn-primary" value="更新">
+    	</form>
+    	<a th:href="@{/movie-list}" class="btn btn-secondary">一覧に戻る</a>
+    </div>
+</body>
+</html>
